@@ -2,6 +2,8 @@
 
 还没有整理完，后面继续整理
 
+[从具体案例了解知识图谱构建流程](https://mp.weixin.qq.com/s/D3K5yHfXMWReVgdGwX8Qtw)
+
 ### 程序
 
 存放经济责任审计知识图谱构建过程中的所有程序
