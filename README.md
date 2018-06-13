@@ -36,11 +36,32 @@
 
 ### 关系查询
 
-![image](https://github.com/mengxiaoxu/economic_audit_knowledge_graph/raw/数据/img/关系查询.png)
+![image](https://github.com/mengxiaoxu/economic_audit_knowledge_graph/raw/master/数据/img/关系查询.png)
 
-![image](https://github.com/mengxiaoxu/economic_audit_knowledge_graph/raw/数据/img/关系查询结果1.png)
+![image](https://github.com/mengxiaoxu/economic_audit_knowledge_graph/raw/master/数据/img/关系查询结果1.png)
 
-![image](https://github.com/mengxiaoxu/economic_audit_knowledge_graph/raw/数据/img/关系查询结果2.png)
+![image](https://github.com/mengxiaoxu/economic_audit_knowledge_graph/raw/master/数据/img/关系查询结果2.png)
+
+## 使用
+
+将```数据```文件夹中的数据导入neo4j数据库
+
+实体信息导入程序：```https://github.com/mengxiaoxu/economic_audit_knowledge_graph/tree/master/程序/实体信息导入程序```
+
+关系数据导入：
+
+```
+# 导入关系数据
+LOAD CSV  WITH HEADERS FROM "file:///relation.csv" AS line
+MATCH (entity1:Hudong{title:line.Hudong1}) , (entity2:Hudong{title:line.Hudong2})
+CREATE (entity1)-[:RELATION { type: line.relation }]->(entity2)
+
+# 添加索引
+CREATE CONSTRAINT ON (c:Hudong)
+ASSERT c.title IS UNIQUE
+```
+
+可以参考：[农业知识图谱说明](https://github.com/qq547276542/Agriculture_KnowledgeGraph/blob/master/README.md)
 
 ## 感谢
 
