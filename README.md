@@ -24,15 +24,15 @@
 
 ## 构建流程
 
-![image](https://github.com/mengxiaoxu/economic_audit_knowledge_graph/raw/数据/img/实现流程图.png)
+![image](https://github.com/mengxiaoxu/economic_audit_knowledge_graph/raw/master/数据/img/实现流程图.png)
 
 ## 效果展示
 
 ### 实体查询
 
-![image](https://github.com/mengxiaoxu/economic_audit_knowledge_graph/raw/数据/img/实体查询.png)
+![image](https://github.com/mengxiaoxu/economic_audit_knowledge_graph/raw/master/数据/img/实体查询.png)
 
-![image](https://github.com/mengxiaoxu/economic_audit_knowledge_graph/raw/数据/img/实体查询结果.png)
+![image](https://github.com/mengxiaoxu/economic_audit_knowledge_graph/raw/master/数据/img/实体查询结果.png)
 
 ### 关系查询
 
