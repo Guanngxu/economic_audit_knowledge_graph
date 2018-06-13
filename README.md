@@ -18,7 +18,7 @@
 
 所有实体数据来源于[互动百科](http://www.baike.com/)
 
-关系数据分两部分，一部分是从[wikidata]中直接爬的
+关系数据分两部分，一部分是从[wikidata](https://www.wikidata.org/wiki/Wikidata:Main_Page)中直接爬的
 
 另一部分是使用程序抽取的事实三元组，将所有新闻数据和词条解释都进行实体关系抽取
 
