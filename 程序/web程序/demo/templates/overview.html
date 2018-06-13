@@ -1,0 +1,44 @@
+{% extends "base.html" %} {% block mainbody %}
+
+<title>详细资料</title>
+
+<div class="container">
+    <div class="row">
+        <!--overview start-->
+
+        <div class="col-sm-12">
+            <div class="row">
+                <div class="col-md-12">
+                    <h3 class="page-header"><i class="fa fa-sitemap" aria-hidden="true"></i> 使用说明 </h3>
+                    <ol class="breadcrumb">
+                        <li><i class="fa fa-home"></i><a href="\">Home</a></li>
+                        <li><i class="fa fa-sitemap" aria-hidden="true"></i>使用说明</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-8">
+        <h2>实体查询</h2>
+        <p class="card-text" style="font-size: 20px;">本系统提供了实体查询功能用于查询实体详细信息，使用方法如下:</p>
+        <img src="static/introduce/实体查询.png" alt="图片加载失败" 
+        style="width: 155%;">
+    </div>
+
+    <br/><br/><hr/>
+
+    <div class="col-md-8">
+        <h2>关系查询</h2>
+        <p class="card-text" style="font-size: 20px;">
+            用户可以根据具体需求来查询关系，三个输入框至少有一个不为空才可查询结果。
+        </p>
+        <img src="static/introduce/关系查询.png" alt="图片加载失败" 
+        style="width: 155%;">
+    </div>
+</div>
+
+<script>
+</script>
+
+{% endblock %}

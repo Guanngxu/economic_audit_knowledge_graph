@@ -1,0 +1,63 @@
+{% extends "base.html" %} {% block mainbody %}
+
+<script src="/static/js/jquery-1.8.3.min.js"></script>
+<script>
+
+    $(function(){
+        $("#submit").click(function(){
+
+            if($("#user_text").val() != null && $.trim($("#user_text").val()) != ""){
+                $.post("/ER-post?title=" + $.trim($("#user_text").val()),null, function(data){
+                    if(data == "true"){
+                        window.location.href="detail.html?title=" + $.trim($("#user_text").val());
+                    }else{
+                        alert("数据库中暂未录入该实体！");
+                    }
+                });
+            }else{
+                alert("请输入实体名称后再查询");
+            }
+        });
+    });
+</script>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+
+            <!--overview start-->
+            <div class="row">
+                <div class="col-md-12">
+                    <h3 class="page-header"><i class="fa fa-search"></i> 实体查询 </h3>
+                    <ol class="breadcrumb">
+                        <li><i class="fa fa-home"></i><a href="\">Home</a></li>
+                        <li><i class="fa fa-search"></i>实体查询</li>
+                    </ol>
+                </div>
+            </div>
+
+            <section class="panel panel-default">
+                <header class="panel-heading">
+                    输入实体 :
+                </header>
+                <div class="panel-body">
+                    <form action="/ER-post" method="post">
+                        <div class="form-group">
+                            <input type="text" id = "user_text" name = "user_text" class="form-control" placeholder="输入实体名称" aria-describedby="basic-addon1">
+                        <div class="col-md-4"></div>
+                        <div class="col-md-4">
+                            <br>
+                            <input type="button" id="submit" value="查询！" class="btn-primary btn-lg btn-block">
+                        </div>
+                        <div class="col-md-4"></div>
+                    </form>
+                </div>
+            </section>
+            <!--collapse end-->
+
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}
